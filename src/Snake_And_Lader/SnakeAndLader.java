@@ -5,6 +5,7 @@ public class SnakeAndLader {
 	public static void main(String[] args) {
 		final int noPlay = 0;
 		final int lader = 1;
+		int count = 0;
 		//Welcome message.
 		System.out.println("Welcome to Snake and Lader simulator...");
 		//game played with single player at start position 0.
@@ -47,6 +48,12 @@ public class SnakeAndLader {
 				}								
 				System.out.println("Attecked by snake. Roll die is: "+rollDie +" Position is: "+player0);
 				}
+			/*
+			 * Counting number of times the dice was played to win the game
+			 */
+			count++;
+			System.out.println("Dice count is: "+count);
 		}			
+		System.out.println("Total Dice count is: "+count);
 	}
 }
