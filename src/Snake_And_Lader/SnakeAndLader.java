@@ -18,7 +18,7 @@ public class SnakeAndLader {
 		/*
 		 * checks for a Option. They are No Play,Ladder or Snake.	
 		 */		
-		while (player0 <=100)
+		while (player0 !=100)
 		{
 			int rollDie = (int) (1 + Math.floor(Math.random() * 10) % 6);
 			int checkOption= (int) (Math.floor(Math.random() * 10) % 3);
@@ -28,6 +28,12 @@ public class SnakeAndLader {
 				break;
 			case lader:
 				player0 += rollDie;
+				/*
+				 * In case the player position go above 100, the player stays in the same previous position
+				 */
+				if(player0 >= 101) {
+					player0 -= rollDie;
+				}
 				System.out.println("Congrats you got lader. Roll die is: "+rollDie +" Position is: "+player0);
 				break;
 			default:
